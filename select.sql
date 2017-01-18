@@ -35,3 +35,24 @@
 	where nascimento <= "1980-00-00" and id != '1'/*é possivel usar operador and , or, not para formar expressoes*/
  /*	order by nome; */
 
+/*operador like*/
+	/*
+	select id , nome from gafanhotos
+	where nascimento like  "1980%" /*operador que aproxima o resultado ,atraves de todos as linhas que estão em 1980*/
+/*	order by nome;      /*pondo o coringa substituindo seja la o que for depois de 1980*/
+	/*% o operador substitui qualquer coisa em dada posição*/
+	/*_ imita qualquer letra menos vazio*/
+		/*operador de distinção de nascimento*/
+/*	select distinct nacionalidade from gafanhotos */
+	/*aparece somente os paises onde os gafanhotos moram*/
+	/*AGREGAÇÕES*/
+	/*select count(*) from gafanhotos /*conta os numeros*/
+	/*podem ser usados paramentros where, e contar especificos registros*/
+	/*
+	select max(peso) from gafanhotos where nascimento like "1980%";
+	/*max peso*/
+	/*
+	select max(peso) from gafanhotos;*/
+	/*AVG É MEDIA*/
+	select AVG(peso) from gafanhotos; /*paga media dos pesos de gafanhotos*/
+	
