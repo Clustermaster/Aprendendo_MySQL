@@ -1,8 +1,8 @@
-	/*use cadastro;
+/*				use cadastro;
 	select * from gafanhotos/*seleciona todos os registros de gafanhotos*/
-	/*order by nome ;	/*ordena atraves do parametro desejado*/
-	/*desc para decrescente*/
-	/*asc para ascendente*/
+/*	order by nome ;	/*ordena atraves do parametro desejado*/
+/*	desc /*para decrescente*/
+/*	asc /*para ascendente*/
 	/*orded by paramento asc; sintaxe*/
 	/*orded by paramento desc; sintaxe*/
 	/*
@@ -54,5 +54,27 @@
 	/*
 	select max(peso) from gafanhotos;*/
 	/*AVG É MEDIA*/
-	select AVG(peso) from gafanhotos; /*paga media dos pesos de gafanhotos*/
+	/*select AVG(peso) from gafanhotos; /*paga media dos pesos de gafanhotos*/
+
+	/*Distinção com o select*/
+/*	use cadastro;
+	select distinct carga from cursos
+	group by carga;
+	/*agrupamento com o select*/
+/*	use cadastro;
+	select totaulas,count(*) from cursos
+	group by totaulas;
+	order by totaulas;	
+	*/
+	/*operador having*/
 	
+	use cadastro;
+	select ano , count(*) from cursos
+	having count(ano) >= 5;
+
+	/*
+	use cadastro;
+	select carga , count(*) from cursos
+	where ano > 2015
+	group by carga
+	having carga > (select avg(carga)from cursos);*/
